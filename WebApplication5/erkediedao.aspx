@@ -7,9 +7,11 @@
     <title>儿科跌倒坠床风险评估表填报</title>
     <link href="Scripts/jquery-ui.min.css" type="text/css" rel="stylesheet" />
     <link href="Scripts/bootstrap.min.css" type="text/css" rel="stylesheet" />
+    <link href="Scripts/jquery.datetimepicker.min.css" rel="stylesheet" />
     <script type="text/javascript" src="Scripts/jquery-1.12.4.min.js"></script>
     <script type="text/javascript" src="Scripts/jquery-ui.min.js"></script>
     <script type="text/javascript" src="Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="Scripts/jquery.datetimepicker.full.js"></script>
     <style type="text/css">
         #table1 {
             font-family: verdana,arial,sans-serif;
@@ -482,6 +484,9 @@
             });
         }
         $(document).ready(function () {
+            $("input[name='evaluation_time']").datetimepicker({
+                format: 'Y-m-d H:i:s',lang:'zh'
+            });
             $("#table1 td :radio").click(function () { getRadio(this); });
             $.ajax({
                 type: "POST",

@@ -36,6 +36,12 @@ namespace WebApplication5
             }
             if (jReq.GetValue("type").ToString() == "insert")
             {
+                JToken tmptk = jReq.GetValue("data");
+                JObject tmp = tmptk as JObject;
+                if (tmp != null)
+                {
+
+                }
                 //System.Diagnostics.Debug.WriteLine(System.Text.RegularExpressions.Regex.Replace("123.456789", @"(^\d{1,}\.\d{2})\d{1,}$", "$1").ToString());
             }
             return;
